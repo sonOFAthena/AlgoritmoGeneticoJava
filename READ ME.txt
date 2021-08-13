@@ -1,0 +1,26 @@
+poblacion: 100 individuos
+probabilidad mutacion: 0.3
+probabilidad cruce: 0.6
+
+palabra buscada: "Politécnico Colombiano Jaime Isaza Cadavid"
+caracteres usados : "!,.:;?áÁãÃâÂõÕôÔóÓéêÉÊíQWERTYUIOPASDFGHJKLÇZXCVBNMqwertyuiopasdfghjklçzxcvbnm1234567890 "
+
+Detalles de la aplicación
+En este ejemplo utilizo como función objetivo, encontrar un gen predefinido por una frase en una Cadena.
+
+La población inicial se creará con 100 individuos aleatorios, con genes de la misma longitud que la solución, la fitness se calculará por el número de letras igual a la solución, por ejemplo si la solución fuera 'hola', el gen 'olq 'tendría aptitude 2 y el gen' qlw 'tendría aptitude 1.
+El criterio de parada será la solución encontrada, o hasta alcanzar un número máximo de generaciones definidas en la aplicación.
+Se implementó la selección por torneo, donde se sortean 3 individuos, de los cuales se seleccionan los 2 con mayor fitness para el cruce(crossover).
+se usó una tasa de conversión del 60%, que se puede cambiar, y un cruce de 1 punto, por ejemplo:
+
+| = corte aleatorio
+
+p1: shw | jakw
+p2: wjd | jwke
+f1: shw | jwke
+f2: wjd | jakw
+
+Se definió una tasa de mutación del 3%, que también se puede cambiar, que reemplaza un gen por uno aleatorio, por ejemplo:
+oaa muwdp -> oaa mpwdp
+
+NOTA: se usó el elitismo, que copia al mejor individuo a la próxima generación.
